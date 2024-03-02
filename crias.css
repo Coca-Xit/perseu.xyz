@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&amp;display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 100%;
+}
+
+.h1-text{
+    font-size: 1.3rem;
+    margin: 40px 0;
+    color: #2c2c2c;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h1-text i{
+    background-color: #509bfc;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    box-shadow: 2px 5px 30px rgba(80, 123, 252, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin: 0 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Isso garante que a altura da tela seja totalmente preenchida */
+}
+
+.perfil {
+    position: relative;
+    min-width: 250px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #1f1f1f 250%);
+    box-shadow: 2px 3px 30px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: -50px 20px 20px 20px; /* Ajuste na propriedade margin-top para levantar os perfis */
+    position: relative;
+    border-radius: 10px;
+}
+
+/* Adicione essa regra para centralizar o conteúdo dentro de cada perfil */
+.perfil .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.barra{
+    width: 50%;
+    height: 4px;
+    background: #ff000000;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.content img{
+    width: 90px;
+    height: 90px;
+    border-radius:100px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: top;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content strong{
+    font-size: 23px;
+    font-weight: 1000;
+    color: #fff;
+    margin-top: 10px;
+}
+.content p{
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    margin: 4px 0px 10px 0px;
+}
+.content p:hover{
+    text-decoration: underline;
+}
+
+.sociais{
+    margin-top: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+.sociais a i{
+    margin-right: 9px;
+}
+.sociais a{
+    border-radius: 20px;
+    color: #8b8b8b;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+.sociais a:hover{
+    color: #fff;
+    box-shadow: 2px 5px 15px rgba(80,123,252,0.05);
+    background-color: #ff0000;
+    transition: all ease 0.5s;
+}
+
+html {
+    font-family: monospace;
+}
+
+.graffiti {
+    font-family: "Graffiti", sans-serif
+}
+
+#overlay-toggle {
+    position:absolute;
+    display: none;
+}
+
+.overlay {
+    z-index: 1;
+    background-color: #000001;
+}
+
+.overlay label {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vw;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+}
+
+.no-hover {
+    display: block;
+}
+
+.fullscreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+body {
+    background-color:#000001!important;
+    color:#fff!important
+}
+
+.hover {
+    text-decoration:none;
+    color:gray!important;
+    transition:.4s!important;
+}
+
+.hover:hover {
+    transition:.4s!important;
+    color:#fff!important
+}
+
+span::before {
+    content:'\A';
+    white-space:pre
+}
+
+#center {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%)
+}
+
+#overlay-toggle:checked ~ .overlay {
+    animation-fill-mode: forwards;
+    animation-name: fade, hide;
+    animation-delay: 0s, 600ms;
+    animation-duration: 600ms, 1ms;
+}
+
+#overlay-toggle:checked ~ .overlay label {
+    animation-fill-mode: forwards;
+    animation-name: fade;
+    animation-delay: 0s;
+    animation-duration: 500ms;
+}
+
+#canvas-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+@media(hover: hover) {
+    .overlayhover {
+        display: block;
+    }
+    .overlayno-hover {
+        display: none;
+    }
+}
+
+@keyframes fade{
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes hide {
+    to {
+        visibility: hidden;
+    }
+}
